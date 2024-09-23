@@ -1,0 +1,14 @@
+<script>
+let str = 'abacddbec';
+let charCount = {};
+let char=[];
+for (let c of str) {
+    charCount[c] = (charCount[c] || 0) + 1;
+ }
+for (let ch of str) {
+  if (charCount[ch] === 1) {
+        char.push(ch);
+      }
+    }
+console.log(char);
+</script>

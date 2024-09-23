@@ -1,0 +1,16 @@
+<script>
+let letter="MyNameIsVisualappFoundry";
+let letter2='';
+for(let i of letter){
+if (i===letter.at(0)){letter2+=i.toLowerCase();
+continue}
+
+else if(i===i.toUpperCase()){
+letter2+="_";
+letter2 += i.toLowerCase();
+}
+else {
+        letter2 += i;
+    }
+}console.log(letter2);
+</script>

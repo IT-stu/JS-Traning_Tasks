@@ -1,0 +1,20 @@
+<script>
+function findSundays() {
+   let start = new Date(2024, 7, 2);
+    let end = new Date(2024, 7, 30);
+    let sundays = [];
+    let count = 0;
+
+    while (start.getDay() !== 0) {
+        start.setDate(start.getDate() + 1);
+    }
+    while (start <= end) {
+        sundays.push(new Date(start));
+        start.setDate(start.getDate() + 7);
+        count++;
+    }
+    console.log("Total Sundays:", count);
+
+}
+findSundays()
+</script>

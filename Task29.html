@@ -1,0 +1,28 @@
+<script>
+let start=parseInt(prompt("Give the Starting Numder = "));
+let end=parseInt(prompt("Give the Ending Numder = "));
+let sum=0;
+let even=[];
+let odd=[];
+let evensum=0;
+let oddsum=0;
+for(let n=start;n<=end;n++){
+if(n%2===0){
+even.push(n);
+evensum = n+evensum;
+
+}
+if(n%2===1){
+console.log(n,"it is ODD");
+odd.push(n);
+oddsum = n+oddsum;
+
+}
+}
+console.log("It is ODD ",odd);
+console.log("It is Even ",even);
+console.log("Sumof Even numders is ",evensum);
+console.log("Sumof odd numders is ",oddsum);
+console.log("length of even numders is ",even.length);
+console.log("length of odd numders is ",odd.length);
+</script>

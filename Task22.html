@@ -1,0 +1,14 @@
+<script>
+let arr="abracadabra";
+let original =new Set([]);
+let duplicate =new Set([]);
+
+for(let i of arr){
+	if((!original.has(i))){
+		original.add(i);
+	} else {
+	duplicate.add(i);
+	}
+}
+console.log("Duplicate = ",duplicate);
+</script>

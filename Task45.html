@@ -1,0 +1,14 @@
+<script>
+const colors = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+const order = ["th","st","nd","rd"];
+function getOrdinal(n) {
+    const suffix = order[(n - 20) % 10] || order[n] || order[0];
+    return n + suffix;
+}
+
+colors.forEach((color, index) => {
+    const ordinal = getOrdinal(index + 1);
+    console.log(`${ordinal} choice is ${color}.`);
+});
+</script>
+

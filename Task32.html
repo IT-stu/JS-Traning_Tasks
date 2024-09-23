@@ -1,0 +1,23 @@
+<script>
+function getSubsets(arr, subsetLength) {
+    const result = [];
+    function generateCombinations(start, subset) {
+        if (subset.length === subsetLength) {
+            result.push([...subset]);
+            return;
+        }
+
+        for (let i = start; i <= arr.length - (subsetLength - subset.length); i++) {
+            subset.push(arr[i]);
+            generateCombinations(i + 1, subset);
+            subset.pop();
+        }
+    }
+    
+    generateCombinations(0, []);
+    return result;
+}
+const array = [1, 2, 3];
+const subsetLength = 2;
+console.log(getSubsets(array, subsetLength));
+</script>

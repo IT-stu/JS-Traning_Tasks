@@ -1,0 +1,23 @@
+<script>
+let question= [ ["What is the capital of France?", ["A.) London", "B) Paris", "C) Berlin"], "paris"],
+ ["Which planet is known as the 'Red Planet'?", ["Venus", "Mars", "Jupiter"], "mars"],
+ ["What is the chemical symbol for water?", ["H2O", "CO2", "O2"], "H2O"],
+ ["What is 2 + 2?", ["3", "4", "5"], "4"],
+ ["Which is the largest mammal?", ["Elephant", "Blue Whale", "Giraffe"], "blue Whale"]
+];
+
+let questionindex = 0;
+let score = 0;
+
+for(let i=questionindex;i<question.length;i++){
+console.log(question[i][0]);
+console.log(question[i][1]);
+if(select.toLowerCase() === question[i][2].toLowerCase()){
+score++;
+}
+
+}
+
+console.log("The Total Score is ",score);
+
+</script>

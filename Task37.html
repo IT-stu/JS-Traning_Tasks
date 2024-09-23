@@ -1,0 +1,13 @@
+<script>
+let letter="Hello there, how are you? I hope you are doing well. There you go!";
+let words = letter.replace(/[.,!?]/, '').toLowerCase().split(/\s+/);
+let frequency = {};
+words.forEach(word => {
+if (frequency[word]) {
+         frequency[word]++;
+} else {
+   frequency[word] = 1;
+}
+});
+console.log("Word Frequency:", frequency);
+</script>

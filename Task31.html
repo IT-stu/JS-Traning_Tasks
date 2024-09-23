@@ -1,0 +1,93 @@
+<script>
+let a=` {
+ "university": "ABC University",
+ "location": "City XYZ",
+ "courses": [
+ {
+ "course_name": "Computer Science",
+ "duration": "4 years",
+ "professors": [
+ {
+ "name": "Professor A",
+ "age": 40,
+ "specialization": "Algorithms"
+ },
+ {
+"name": "Professor B",
+ "age": 35,
+ "specialization": "Database Systems"
+ }
+ ],
+ "students": [
+ {
+ "name": "Alice",
+ "age": 20,
+ "semester": 6
+ },
+ {
+ "name": "Bob",
+ "age": 22,
+ "semester": 8
+ }
+ ]
+ },
+ {
+ "course_name": "Electrical Engineering",
+ "duration": "5 years",
+ "professors": [
+ {
+ "name": "Professor C",
+ "age": 45,
+ "specialization": "Power Systems"
+ },
+ {
+ "name": "Professor D",
+ "age": 38,
+ "specialization": "Control Systems"
+ }
+ ],
+ "students": [
+ {
+ "name": "Charlie",
+ "age": 19,
+ "semester": 3
+ },
+ {
+ "name": "David",
+ "age": 21,
+ "semester": 4
+ }
+ ]
+ }
+ ]
+ }`;
+
+let obj=JSON.parse(a);
+let age=[];
+console.log("University name is ",obj.university,"University location is",obj.location);
+let s_age=[];
+for (let i=0;i<2;i++){
+console.log('Course name is',obj.courses[i].course_name,". Duration is",obj.courses[i].duration);
+}
+for (let i=0;i<2;i++){
+for(let j of obj.courses[i].professors){
+age.push(j.age);
+
+}
+}
+console.log("Professors Average age == ");
+console.log('Course name is',obj.courses[0].course_name,"Average age is",(age[0]+age[1])/2,'. Course name is',obj.courses[1].course_name,"Average age is",(age[2]+age[3])/2);
+
+for (let i=0;i<2;i++){
+for(let j of obj.courses[i].students){
+s_age.push(j.age);
+
+}
+
+}
+console.log("Professors Average age ==");
+console.log('Course name is',obj.courses[0].course_name,"Average age is",(s_age[0]+s_age[1])/2,'. Course name is',obj.courses[1].course_name,"Average age is",(s_age[2]+s_age[3])/2);
+
+}
+}
+</script>

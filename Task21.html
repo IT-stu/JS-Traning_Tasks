@@ -1,0 +1,58 @@
+<script>
+let a= ` {
+ "employees": [
+ {
+ "name": "Alice",
+ "age": 30,
+ "department": "Sales",
+"sales": [1500, 1200, 1800, 2000]
+ },
+ {
+ "name": "Bob",
+ "age": 25,
+ "department": "Marketing",
+ "sales": [1000, 900, 1200, 1400]
+ },
+ {
+ "name": "Charlie",
+ "age": 28,
+ "department": "Sales",
+ "sales": [2000, 2100, 1900, 1800]
+ },
+ {
+ "name": "David",
+ "age": 32,
+ "department": "Marketing",
+ "sales": [1100, 950, 1350, 1200]
+ }
+ ]
+ }`;
+let dep=[];
+
+let obj = JSON.parse(a);
+
+for(let i of obj.employees){
+let sum=0;
+for(let j of i.sales){
+	sum+=j;
+     }
+dep.push(sum);
+}
+
+console.log("Sales Department is ",dep[0]+dep[2],".  Then Marketing Department is ",dep[1]+dep[3]);
+
+console.log(obj.employees[3].name," is higest Sales. the Sales is ",Math.max(...dep));
+
+
+debugger;
+let avgage=[];
+for(let j =0;j<(obj.employees).length;j++){
+let temp=obj.employees[j].age;
+avgage.push(temp);
+
+}
+console.log("Sales Department's Avearage is ",(avgage[0]+avgage[2])/2,". Then Marketing Department's Avearage is ",(avgage[1]+avgage[3])/2);
+
+let avg=(Math.max(...dep))/4;
+console.log(obj.employees[3].name," is have higest Avearage Salary. The Avearage is ",avg);
+</script>

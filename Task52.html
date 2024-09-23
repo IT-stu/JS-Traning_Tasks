@@ -1,0 +1,9 @@
+<script>
+function longestWord(sentence) {
+    let words = sentence.split(' ');
+    let longest = words.reduce((a, b) => a.length > b.length ? a : b);
+    return longest;
+}
+let sentence = "Hi We are Calling From SRMVCAS";
+console.log(longestWord(sentence));
+</script>

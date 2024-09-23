@@ -1,0 +1,47 @@
+<script>
+
+a=`{
+ "employees": [
+ {
+ "id": 1,
+ "name": "John Doe",
+ "department": "HR",
+ "Salary": 50000
+},
+{"id": 2,
+ "name": "Jane Smith",
+ "department": "Finance",
+ "Salary": 60000
+ },
+ { "id": 3,
+ "name": "Michael Johnson",
+ "department": "IT",
+ "Salary": 75000
+ }
+ ]
+ }`;
+let obj=JSON.parse(a);
+let sum=0;
+
+{
+for(let i of obj["employees"]){
+sum += i.Salary;
+}
+console.log("Sum of Salary is ",sum);
+}
+	{let max=[];
+for(let i of obj["employees"]){max.push(i.Salary);}
+console.log("Maximum Salary is ",Math.max(...max));
+console.log("Minimum Salary is ",Math.min(...max));
+	}
+Name=[];
+{
+for(let i of obj["employees"]){
+Name.push(i.name);
+
+}
+console.log(Name.toSorted());
+
+
+}
+</script>
